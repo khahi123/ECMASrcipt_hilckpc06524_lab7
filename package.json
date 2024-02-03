@@ -17,6 +17,19 @@
   },
   "homepage": "https://github.com/khahi123/ECMASrcipt_hilckpc06524_lab7#readme",
   "devDependencies": {
-    "eslint": "^8.56.0"
+    "eslint": "^8.56.0",
+    "husky": "^9.0.10",
+    "lint-staged": "^15.2.1"
+  },
+  "husky":{
+    "hooks":{
+      "pre-commit":"lint-staged"
+    }
+  },
+  "lint-staged":{
+    "*.{js,jsx}": [
+      "prettier --single-quote --write",
+      "git add"
+    ]
   }
 }
